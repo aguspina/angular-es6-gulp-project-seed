@@ -1,0 +1,16 @@
+aside(ui-view='aside')
+section
+  #wrapper-section
+    .fixed
+      header
+        .header-left
+          .search(ui-view='search')
+          .breadcrumb(ui-view='breadcrumb')
+          .actions(ui-view='actions', ng-show='Resources.anyoneSelected()')
+          .section-title(ui-view='section-title', ng-show='titleActive()')
+        .header-right
+          .settings(ui-view='settings')
+          .notifications(ui-view='notifications')
+          .messages(ui-view='messages')
+    main(ui-view='container')
+
